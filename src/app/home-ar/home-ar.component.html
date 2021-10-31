@@ -1,0 +1,427 @@
+<div dir="rtl">
+  <section class="header">
+    <div class="navbar">
+      <nav class="navbar navbar-expand-lg navbar-light container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../../assets/Princeandqueen/Prince and queen logo.png"
+            alt=""
+            class="img-fluid"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link btn shadow-none px-3" (click)="scrollTo('about')"
+                >معلومات عنا
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn shadow-none" (click)="scrollTo('service')"
+                >خدمات</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn shadow-none" (click)="scrollTo('gallery')"
+                >صالة عرض</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link btn shadow-none" (click)="scrollTo('reviews')"
+                >Testimonials</a
+              >
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link btn shadow-none" (click)="scrollTo('how')"
+                >اتصل بنا</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn shadow-none" (click)="scrollTo('contact')"
+                >موقع</a
+              >
+            </li>
+          </ul>
+        </div>
+        <ul class="navbar-nav pr-0">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              [routerLink]="['']"
+              routerLinkActive="router-link-active"
+              >English</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link call rounded-pill" href="tel:+20122223174"
+              >اتصل بنا : 0122223174</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 mt-2">
+          <img
+            src="../../assets/Princeandqueen/Group 42.png"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-md-5 mt-2">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <p> مرحبًا بكم في Prince & Queen </p>
+            <h1>التعليم المثالي <span style="color: #f99b29;">لكل طفل</span> </h1>
+            <h3>  </h3>
+            <div class="mt-4">
+              <input
+                class="form-control form-control-lg shadow-none"
+                type="text"
+                placeholder="اسمك"
+                formControlName="name"
+              />
+              <app-fielderror
+                [displayError]="isFieldValid('name')"
+                errorMsg="رجاء ادخل اسما صحيحا"
+              >
+              </app-fielderror>
+            </div>
+            <div class="mt-4">
+              <input
+                class="form-control form-control-lg shadow-none"
+                type="number"
+                placeholder="رقم الهاتف"
+                formControlName="phone"
+              />
+              <app-fielderror
+                [displayError]="isFieldValid('phone')"
+                errorMsg="يرجى إدخال رقم هاتف صالح"
+              ></app-fielderror>
+            </div>
+            <div class="mt-4">
+              <input
+                class="form-control form-control-lg shadow-none"
+                type="email"
+                placeholder="عنوان البريد الإلكتروني"
+                formControlName="email"
+              />
+              <app-fielderror
+                [displayError]="isFieldValid('email')"
+                errorMsg="يرجى إدخال عنوان بريد إلكتروني صالح"
+              ></app-fielderror>
+            </div>
+            <div class="text-center mt-5">
+              <button type="submit" class="btn-form">
+                سجل طفلك الآن !!
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="about">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-6 mt-3">
+          <img
+            src="../../assets/Princeandqueen/Mask Group 2.png"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-md-6 mt-3">
+          <h1> عنا </ h1>
+            <h2> من نحن </ h2>
+            <p>
+              Prince & Queen أكثر من 30 عامًا من الخبرة في التأسيس
+              وتعليم الأطفال ، بدأنا في المهندسين منذ عام 1989 كجزء من
+              المشروع التربوي لمجموعة مدارس الواحة. والآن نحن موجودون
+              في مدينة الشروق
+            </p>
+            <p>
+              لقد أعددنا حضانتنا لتكون منزل أطفالك حيث يمكنهم ذلك
+              العب ، تعلم ، اضحك ، تدريب ، ارسم واستكشف العالم من خلاله
+              أنشطتنا اليومية في بيئة آمنة وجميلة. للأطفال الذين تتراوح أعمارهم
+              من 6 أشهر إلى 5 سنوات
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="service">
+    <div class="container">
+      <h1>خدماتنا</h1>
+      <div class="row">
+        <div class="col-md-2 mt-3 mx-md-0 mx-5">
+          <div class="card text-center">
+            <img
+              src="../../assets/Princeandqueen/graduation cap-pen-pencil-education.svg"
+              alt=""
+              class="card-img-top img-card mx-auto"
+            />
+            <div class="card-body pb-0">
+              <h5 class="card-title">تعليم</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 mt-3 mx-md-0 mx-5">
+          <div class="card text-center">
+            <img
+              src="../../assets/Princeandqueen/Group 18.svg"
+              alt=""
+              class="card-img-top img-card mx-auto"
+            />
+            <div class="card-body pb-0">
+              <h5 class="card-title">رياضات</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 mt-3 mx-md-0 mx-5">
+          <div class="card text-center">
+            <img
+              src="../../assets/Princeandqueen/Group 20.png"
+              alt=""
+              class="card-img-top img-card mx-auto"
+            />
+            <div class="card-body pb-0">
+              <h5 class="card-title">مسرح</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 mt-3 mx-md-0 mx-5">
+          <div class="card text-center">
+            <img
+              src="../../assets/Princeandqueen/Group 43.svg"
+              alt=""
+              class="card-img-top img-card mx-auto"
+            />
+            <div class="card-body pb-0">
+              <h5 class="card-title">دين</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 mt-3 mx-md-0 mx-5">
+          <div class="card text-center">
+            <img
+              src="../../assets/Princeandqueen/Group 23.svg"
+              alt=""
+              class="card-img-top img-card mx-auto"
+            />
+            <div class="card-body pb-0">
+              <h5 class="card-title">موسيقى</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 mt-3 mx-md-0 mx-5">
+          <div class="card text-center">
+            <img
+              src="../../assets/Princeandqueen/Group 24.svg"
+              alt=""
+              class="card-img-top img-card mx-auto"
+            />
+            <div class="card-body pb-0">
+              <h5 class="card-title">رسم</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="gallery">
+    <div class="container">
+      <h1>صورنا</h1>
+      <div class="row">
+        <div class="col-md-4 mt-3">
+          <img
+            src="../../assets/Princeandqueen/28.png"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-md-4 mt-3">
+          <img
+            src="../../assets/Princeandqueen/31.png"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-md-4 mt-3">
+          <img
+            src="../../assets/Princeandqueen/33.png"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-md-4 mt-3">
+          <img
+            src="../../assets/Princeandqueen/37.png"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-md-4 mt-3">
+          <img
+            src="../../assets/Princeandqueen/03.png"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="col-md-4 mt-3">
+          <img
+            src="../../assets/Princeandqueen/39.png"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- <section class="reviews">
+    <div class="container">
+      <h1>Our Testimonials</h1>
+      <h2>What Parents Say</h2>
+  
+      <div class="text-center">
+        <video width="800" controls>
+          <source src="mov_bbb.mp4" type="video/mp4">
+          <source src="mov_bbb.ogg" type="video/ogg">
+          Your browser does not support HTML video.
+        </video>
+      </div>
+    </div>
+  </section> -->
+  
+  <section class="how container">
+    <div class="row d-flex">
+      <div class="col-md-2 mt-3">
+        <img
+          src="../../assets/Princeandqueen/h1-slide-1-img-3.png"
+          alt=""
+          class="img-fluid"
+        />
+      </div>
+      <div class="col-md-2 mt-3"></div>
+      <div class="col-md-6 mt-3 d-flex align-self-center flex-wrap">
+        <h1 class="pt-3">كيف تسجل طفلك في الفصل؟</h1>
+        <a class="mr-5 p-3" href="tel:+20122223174">اتصل بنا: 0122223174</a>
+      </div>
+      <div class="col-md-2 mt-3 align-self-end">
+        <img
+          src="../../assets/Princeandqueen/h1-slide-1-img-4.png"
+          alt=""
+          class="img-fluid"
+        />
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-6 pt-3">
+          <h1> اتصل بنا </h1>
+            <h2> تفضل بزيارتنا أو مراسلتنا على الخط </h2>
+            <p class = "pb-5">
+              نود أن تعلم ان هنا هو منزل أطفالك بعيدًا عن المنزل.
+              في مكان ما يمكن لأطفالك أن يضحكوا فيه ويتعلموا بطريقة محبة ومريحة في
+              بيئة سعيدة وآمنة.
+            </p>
+          <div>
+            <p>
+              <i class="fas fa-map-marker-alt pl-2 btn-outline-danger"></i>
+              <a
+                href="https://www.google.com/maps/place/Prince+%26+Queen+Nursery+./@30.1650625,31.6282488,17z/data=!3m1!4b1!4m5!3m4!1s0x1457f7f2cbf6027f:0xdd1ce2a5e4c18be9!8m2!3d30.1650445!4d31.6303225"
+                target="blank"
+              >
+                Building 3, district 1, zone2 The service center of zone z area,
+                El sherouk city, New Cairo.
+              </a>
+            </p>
+            <p>
+              <i class="fas fa-phone pl-2 btn-outline-danger"></i>
+              <a href="tel:+20122223174"> 0122223174 (+2)</a>
+            </p>
+            <p>
+              <i class="far fa-envelope pl-2 btn-outline-danger"></i>
+              <a href="mailto:Prince.queen@oasisdemaadi.com"
+                >Prince.queen@oasisdemaadi.com</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 pt-3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3449.5225898700746!2d31.62824881490142!3d30.16506248183858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1457f7f2cbf6027f%3A0xdd1ce2a5e4c18be9!2sPrince%20%26%20Queen%20Nursery%20.!5e0!3m2!1sen!2seg!4v1635686898469!5m2!1sen!2seg"
+            class="w-100"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="footer mt-5">
+    <div class="container text-center">
+      <img
+        src="../../assets/Princeandqueen/Prince and queen logo.png"
+        alt=""
+        class="img-fluid"
+      />
+  
+      <div class="d-md-flex justify-content-between flex-wrap w-50 mx-auto">
+        <a class="nav-link pt-5 btn shadow-none" (click)="scrollTo('about')"
+          >معلومات عنا</a
+        >
+  
+        <a class="nav-link pt-5 btn shadow-none" (click)="scrollTo('gallery')"
+          >صورنا</a
+        >
+  
+        <a class="nav-link pt-5 btn shadow-none" (click)="scrollTo('service')"
+          >خدمات</a
+        >
+  
+        <a class="nav-link pt-5 btn shadow-none" (click)="scrollTo('how')"
+          >اتصل بنا</a
+        >
+  
+        <a class="nav-link pt-5 btn shadow-none" (click)="scrollTo('contact')"
+          >موقع</a
+        >
+      </div>
+      <div class="text-center">
+        <div class="logos mt-3">
+          <i class="fab fa-facebook-square fa-2x mx-2"></i>
+          <i class="fab fa-twitter-square fa-2x mx-2"></i>
+          <i class="fab fa-instagram-square fa-2x mx-2"></i>
+        </div>
+        <div>
+          <p>حقوق النشر © 2021 Panoply Nursery & Pre school</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
